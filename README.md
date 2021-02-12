@@ -1,6 +1,6 @@
-#UploadR - PHP simple file upload interface
+# UploadR - PHP simple file upload interface
 
-##Features
+## Features
 
 - Upload files in hidden folders and share by link
 - Customise folder name
@@ -8,13 +8,13 @@
 - Username/password authentication
 - Log incorrect credentials/self-upload links
 
-##Requirements
+## Requirements
 
 - PHP 7 or above
 - A folder writable for the user that PHP runs as (usally _www-data_)
 - Optional, but recommended, `.htaccess` enabled
 
-##Configuration
+## Configuration
 
 - Default username `admin` and password `admin`, please change immediately
 - `$FOLDER_LOCATION` is the path of the writable folder for uploads (ex. `/var/www/upload-folder/`)
