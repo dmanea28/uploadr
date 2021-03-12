@@ -414,7 +414,7 @@ function manage_uploaded_files(){
     //Manage self-uploads
     if (isset($_GET['self'])){
         $ok_self=1;
-        if (!ctype_alnum($_GET['self'])) $ok_self=0;
+        if (!($_GET['self']==preg_replace('/[^\w]+/u',"",$_GET['self']))) $ok_self=0;
         if (!file_exists($dir.$_GET['self'])||!is_dir($dir.$_GET['self'])) $ok_self=0;
         if (!file_exists($dir.$_GET['self']."/.htself")) $ok_self=0;
         if ($ok_self){
@@ -504,7 +504,7 @@ if (isset($_GET['self'])){
         $dir=$GLOBALS['FOLDER_LOCATION'];
         //Check permission
         $ok_self=1;
-        if (!ctype_alnum($_GET['self'])) $ok_self=0;
+        if (!($_GET['self']==preg_replace('/[^\w]+/u',"",$_GET['self']))) $ok_self=0;
         if (!file_exists($dir.$_GET['self'])||!is_dir($dir.$_GET['self'])) $ok_self=0;
         if (!file_exists($dir.$_GET['self']."/.htself")) $ok_self=0;
         if ($ok_self){
